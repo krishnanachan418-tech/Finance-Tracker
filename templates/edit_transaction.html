@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Edit Transaction{% endblock %}
+{% block content %}
+<div class="form-card">
+    <h2>Edit Transaction</h2>
+    <form method="POST">
+        <label>Type</label>
+        <select name="type" required>
+            <option value="income" {% if transaction.type == 'income' %}selected{% endif %}>Income</option>
+            <option value="expense" {% if transaction.type == 'expense' %}selected{% endif %}>Expense</option>
+        </select>
+
+        <label>Category</label>
+        <input type="text" name="category" value="{{ transaction.category }}" required>
+
+        <label>Amount (₹)</label>
+        <input type="number" step="0.01" name="amount" value="{{ transaction.amount }}" required>
+
+        <label>Description (optional)</label>
+        <input type="text" name="description" value="{{ transaction.description or '' }}">
+
+        <label>Date</label>
+        <input type="date" name="transaction_date" value="{{ transaction.transaction_date }}" required>
+
+        <button type="submit" class="btn">Update Transaction</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,165 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+.navbar {
+    background: #1f2937;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav-brand { font-size: 1.3rem; font-weight: bold; }
+
+.nav-links a {
+    color: #e5e7eb;
+    text-decoration: none;
+    margin-left: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover { color: #4ade80; }
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.alert {
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+.alert-success { background: #d1fae5; color: #065f46; }
+.alert-danger { background: #fee2e2; color: #991b1b; }
+.alert-warning { background: #fef3c7; color: #92400e; }
+.alert-info { background: #dbeafe; color: #1e40af; }
+
+.form-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    max-width: 450px;
+    margin: 2rem auto;
+}
+
+.form-card h2 { margin-bottom: 1.2rem; }
+
+.form-card label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-card input, .form-card select {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1.2rem;
+}
+.btn:hover { background: #1d4ed8; }
+
+.form-footer { margin-top: 1rem; font-size: 0.9rem; text-align: center; }
+
+.summary-cards {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.card h3 { font-size: 0.9rem; color: #6b7280; margin-bottom: 0.5rem; }
+.card p { font-size: 1.4rem; font-weight: bold; }
+.card.income p { color: #16a34a; }
+.card.expense p { color: #dc2626; }
+.card.balance p { color: #2563eb; }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.transactions-table th, .transactions-table td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.transactions-table th { background: #f9fafb; color: #6b7280; }
+
+.badge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+}
+.badge.income { background: #d1fae5; color: #065f46; }
+.badge.expense { background: #fee2e2; color: #991b1b; }
+
+td.income { color: #16a34a; font-weight: 600; }
+td.expense { color: #dc2626; font-weight: 600; }
+
+.link-edit, .link-delete {
+    font-size: 0.85rem;
+    margin-right: 0.6rem;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.link-edit { color: #2563eb; }
+.link-delete { color: #dc2626; }
+
+.empty-state {
+    text-align: center;
+    color: #6b7280;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+}
